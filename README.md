@@ -51,7 +51,7 @@ The system utilizes the following tables:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/healthcare-management-system.git
+   git clone https://github.com/NeerajBuneeti/healthcare-management-system.git
    ```
 
 2. Navigate to the project directory:
