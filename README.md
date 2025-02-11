@@ -1,143 +1,93 @@
-# Healthcare-management-system
-Project: Healthcare Managment System, This project is part of my coursework on Database organization(CS425) at Illinois Institute of technology.
-
-A Healthcare Management System is a comprehensive software solution designed to streamline and optimize healthcare processes. It encompasses patient records, appointment 	scheduling, billing, Healthcareplan, labtest, Medicalrecord, Medications and overall patient care within healthcare departments. These systems aim to improve the quality of 	patient care, enhance communication among healthcare professionals, and ensure regulatory compliance.
-
-How to build and run the code:
-
---> We are using PYTHON interface to build and run our code.
---> At First run database.py file, it creates a database (called Healthcare.db) and tables.
---> To verify all the operations into the command line tool, run Final_Deliverable.py file
+# Healthcare Management System
 
 
-All tables and schema used in this project:
---------------------------------------------
+## 📌 Overview
 
-	● Patient(PID, Pname[Fname , Lname ], DOB , Gender , address , ContactNo , PEmail )
-	● Hospital( HID , Hname , Haddress ,HCPlan)
-	● MedicalStaff( SID , Sname [Fname , Lname ], Specialist ,ContactNo , SEmail , Designation )
-	● Appointment( AID , PID , SID , ADate , Comment,HID )
-	● MedicalRecord( RID , PID , SID , Rdate , Diagno, Treat , Presc)
-	● Billing( BID , PID , MID, Pname[Fname,Lname] , SID , sname[Lname,fname], AID, BillDate , Amt , payStatus , Pmethod)
-	● Medication( MID , Mname, PID , SID , desc , Instructions )
-	● Healthcareprovider ( HPID , HPName , HPAdd , HPCNO , HPEmail, PLNID, HID )
-	● Healthcareplan ( PLNID , PID , HPID , PlnName , PlnSdate , PlnEdate )
-	● LabTest( TID , PID, SID , Tdate , TName , TResults , Range )
+This Healthcare Management System is a comprehensive software solution designed to streamline and optimize healthcare processes. Developed as part of the Database Organization (CS425) coursework at Illinois Institute of Technology, this system manages patient records, appointment scheduling, billing, healthcare plans, lab tests, medical records, medications, and overall patient care within healthcare departments.
 
+## 🎯 Objectives
 
-All operation is performed in this project:
--------------------------------------------
+- Improve the quality of patient care
+- Enhance communication among healthcare professionals
+- Ensure regulatory compliance
+- Optimize healthcare processes
 
-1. Create
-2. Read
-3. Update
-4. Delete
-5. Average
-6. Count
-7. Minimum
-8. Maximum
-9. Union
-10. Intersect
-11. NTile
-12. Cummulative Distribution
-13. OLAP_Groupby
-15. Rollup
+## 🗂️ Database Schema
 
+The system utilizes the following tables:
 
-First we have create database Healthcare.db. and within that database we have created all tables and inserted data successfully.
+| Table Name | Primary Key | Notable Fields |
+|------------|-------------|-----------------|
+| Patient | PID | Pname, DOB, Gender, Address |
+| Hospital | HID | Hname, Haddress, HCPlan |
+| MedicalStaff | SID | Sname, Specialist, Designation |
+| Appointment | AID | PID, SID, ADate, Comment |
+| MedicalRecord | RID | PID, SID, Diagno, Treat |
+| Billing | BID | PID, MID, AID, Amt, PayStatus |
+| Medication | MID | Mname, PID, SID, Instructions |
+| Healthcareprovider | HPID | HPName, PLNID, HID |
+| Healthcareplan | PLNID | PID, HPID, PlnName, PlnSdate |
+| LabTest | TID | PID, SID, TName, TResults |
 
-Then we have written PYTHON code to perfom all operation for selected tables as mentioned above. First we have to select table and then select options to perform any operations.
+## 🛠️ Features and Operations
 
-All Tables options:
+1. **CRUD Operations**
+   - Create, Read, Update, Delete records in all tables
 
-	1. Patient
-	2. Healthcareprovider
-	3. Healthcareplan
-	4. Hospital
-	5. MedicalStaff
-	6. Appointment
-	7. MedicalRecord
-	8. Billing
-	9. Medication
-	10. LabTest
-	11. Quit
+2. **Advanced Queries**
+   - Average, Count, Minimum, Maximum
+   - Union and Intersect
+   - NTile and Cumulative Distribution
+   - OLAP Group By and Rollup
 
-After selecting tables, We have to select operations options as below one by one:
+## 🚀 Getting Started
 
-Option-1:
+### Prerequisites
 
-	CREATE operation: The CREATE TABLE statement is used to create a new table/records in a database.
+- Python 3.7+
+- SQLite3
 
+### Installation
 
-Option-2:
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/healthcare-management-system.git
+   ```
 
-	READ operation: The READ or SELECT statement is used to retrieve or read data from database.
+2. Navigate to the project directory:
+   ```
+   cd healthcare-management-system
+   ```
 
-Option-3 :
+3. Run the database setup script:
+   ```
+   python database.py
+   ```
 
-	UPDATE operation: The UPDATE statement is used to modify the existing records in a table.
+4. Launch the main application:
+   ```
+   python Final_Deliverable.py
+   ```
 
-Option-4:
+## 🖥️ Usage
 
-	DELETE operation: The DELETE statement is used to delete existing records in a table.
+1. Select a table from the main menu (1-10)
+2. Choose an operation to perform (1-15)
+3. Follow the prompts to input data or view results
 
-Option-5:
+## 🎥 Demo
 
-	AVERAGE oepration: The AVG() function returns the average value of a numeric column.
+Watch our [CRUD operations demo video](https://www.loom.com/share/8fe231c70aae45e7bd8a17d04ec104af?sid=ec2b5509-4df3-4894-a794-51f81cb065d3) to see the system in action.
 
-Option-6:
+## 🧪 Testing
 
-	COUNT oepration: The COUNT() function returns the number of rows that matches a specified criterion.
+We've conducted extensive testing, including:
+- Positive and negative test cases for all operations
+- Error handling and user-friendly error messages
 
-Option-7:
+## 🙏 Acknowledgments
 
-	MINIMUM oepration: The MIN() function returns the smallest value of the selected column.
+- Illinois Institute of Technology,
+- Professor Gerald Balekaki
 
-Option-8:
-
-	MAXIMUM oepration: The MAX() function returns the largest value of the selected column.
-
-Option-9:
-
-	UNION oepration: The UNION operator is used to combine the result-set of two or more SELECT statements.
-
-Option-10:
-
-	INTERSECT oepration: The INTERSECTION operator is used to perform or returns only the common rows between two or more sets.
-
-Option-11:
-
-	NTile Operation: The NTile operator is used to divide the result set into a specified number of roughly equal parts (or "tiles") based on a specified column's values. 
-
-Option-12:
-
-	CUMMULATIVE DISTRIBUTION oepration: The CUMMULATIVE DISTRIBUTION operator is used to calculate the cumulative distribution of a set of values within a partition of the result set. 
-
-Option-13:
-
-	OLAP_Groupby oepration: The "GROUP BY" operation in OLAP is used to group data based on specific dimensions or attributes.
-
-Option-14:
-
-	ROLLUP oepration: The ROLLUP operator is used to provide a summarized view of data at higher levels of a hierarchy, aggregating data from lower levels.
-
-
-
-We have executed many testcases (postive and negative ) for all these operations and It's executing as expected.
-
-Also We have written Error Handling code like exception or Print particular and understanable error for all the operations.
-
-Example: except Exception as e:
-        	print(e)
-
-
-Errors: If we select any random number or character which is not valid for the tables or choice we get error like
-
-		"Invalid Table choice
-		Enter again from 1 to 11"
-
-
-
-
-CRUD operation Video: Link for the loom video: https://www.loom.com/share/8fe231c70aae45e7bd8a17d04ec104af?sid=ec2b5509-4df3-4894-a794-51f81cb065d3
-
+---
